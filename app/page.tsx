@@ -4,21 +4,24 @@ import { HyperText } from "@/components/magicui/hyper-text";
 import { Terminal, TypingAnimation } from "@/components/magicui/terminal";
 import React from "react";
 import { AnimatedSpan } from "../components/magicui/terminal";
+import { LineShadowText } from "@/components/magicui/line-shadow-text";
 
 function HomePage() {
     return (
-        <div className="flex justify-center items-center h-screen gap-40">
-            <div className="flex flex-col items-end">
+        <div className="flex justify-center items-center h-screen gap-40 ">
+            <div className="flex flex-col items-end transform translate-y-16">
                 <HyperText
                     animateOnHover={false}
-                    className="text-4xl font-medium">
+                    className="text-4xl font-medium absolute ">
                     Hellooo, I am
                 </HyperText>
-                <AuroraText className="text-[10rem] font-semibold">
+                <LineShadowText
+                    className=" text-[10rem] m-0 p-0"
+                    shadowColor="white">
                     Pratik
-                </AuroraText>
+                </LineShadowText>
             </div>
-            <div>
+            <div className="transform translate-y-14">
                 <Terminal className="h-[18rem]">
                     <TypingAnimation className="text-muted-foreground">
                         &gt; whoami
