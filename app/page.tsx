@@ -1,17 +1,22 @@
 "use client";
-import {
-    AnimatedSpan,
-    Terminal,
-    TypingAnimation,
-} from "@/components/magicui/terminal";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { HyperText } from "@/components/magicui/hyper-text";
+import { Terminal, TypingAnimation } from "@/components/magicui/terminal";
 import React from "react";
+import { AnimatedSpan } from "../components/magicui/terminal";
 
 function HomePage() {
     return (
         <div className="flex justify-center items-center h-screen gap-40">
             <div className="flex flex-col items-end">
-                <h3 className="text-4xl">Hellooo, I am</h3>
-                <h1 className="text-9xl">Pratik</h1>
+                <HyperText
+                    animateOnHover={false}
+                    className="text-4xl font-medium">
+                    Hellooo, I am
+                </HyperText>
+                <AuroraText className="text-[10rem] font-semibold">
+                    Pratik
+                </AuroraText>
             </div>
             <div>
                 <Terminal className="h-[18rem]">
