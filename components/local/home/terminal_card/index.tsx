@@ -11,7 +11,7 @@ import React from "react";
 function TerminalCardLocal() {
     return (
         <MagicCard className="p-1 rounded-xl" gradientColor={"#262626"}>
-            <Terminal className="h-[18rem]">
+            <Terminal className="h-[18rem] w-[16rem] 300:w-[18rem] 350:w-[21rem] 400:w-[24rem]">
                 <TypingAnimation className="text-muted-foreground">
                     &gt; whoami
                 </TypingAnimation>

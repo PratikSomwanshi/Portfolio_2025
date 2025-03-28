@@ -77,13 +77,14 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary: var(--primary);
-        --primary: var(--secondary);
-    }
+    --breakpoint-1050: 1050px;
+    --breakpoint-950: 950px;
+    --breakpoint-910: 910px;
+    --breakpoint-450: 450px;
+    --breakpoint-400: 400px;
+    --breakpoint-350: 350px;
+    --breakpoint-300: 300px;
 }
 
 body {
@@ -91,7 +92,7 @@ body {
     color: var(--secondary);
 }
 
-.dark {
+/* .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
@@ -123,7 +124,7 @@ body {
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
-}
+} */
 
 @layer base {
     * {
@@ -132,14 +133,4 @@ body {
     body {
         @apply bg-background text-foreground;
     }
-}
-
-/* Hide default arrow */
-[data-popper-arrow] {
-    display: none !important;
-}
-
-[data-popper-arrow]::before {
-    background-color: #1f2937 !important; /* Same as bg-gray-800 */
-    border-color: transparent !important; /* Same color as bg-gray-800 */
 }
